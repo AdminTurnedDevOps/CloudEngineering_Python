@@ -5,7 +5,6 @@ import json
 
 global dbname
 
-
 def create_mysql_db(*kwargs):
     log = open(logs, 'w')
 
