@@ -15,4 +15,4 @@ def buildAPI(uri, username):
         logging.error(e)
 
 if __name__ == '__main__':
-    buildAPI(uri=, username=)
+    buildAPI(uri='', username='')
