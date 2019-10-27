@@ -14,4 +14,5 @@ def buildAPI(uri, username):
     except Exception as e:
         logging.error(e)
 
-buildAPI(uri=, username=)
+if __name__ == '__main__':
+    buildAPI(uri=, username=)
