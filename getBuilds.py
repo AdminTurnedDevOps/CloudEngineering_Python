@@ -14,4 +14,4 @@ def buildAPI(uri, username):
     except Exception as e:
         logging.error(e)
 
-buildAPI(uri='https://vsrm.dev.azure.com/adminturneddevops/AzureDevOpsRecipes/_apis/release/definitions/?api-version=5.1', username='mlevan1992@outlook.com')
+buildAPI(uri=, username=)
