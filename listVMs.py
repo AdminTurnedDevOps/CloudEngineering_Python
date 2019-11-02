@@ -27,4 +27,9 @@ def listVMs(resourceGroup):
 
 resourceGroup = sys.argv[1]
 
-listVMs(resourceGroup)
+if __name__ == '__main__':
+    listVMs(resourceGroup)
+
+else:
+    print('Running as imported module')
+    listVMs(resourceGroup)
