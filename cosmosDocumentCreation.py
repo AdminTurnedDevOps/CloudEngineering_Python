@@ -48,10 +48,10 @@ def cosmosDocuments(*args):
     except Exception as e:
         raise e
 
-endpoint = sys.argv[0]
-primaryKey = sys.argv[1]
-database = sys.argv[2]
-container = sys.argv[3]
+endpoint = sys.argv[1]
+primaryKey = sys.argv[2]
+database = sys.argv[3]
+container = sys.argv[4]
 
 if __name__ == '__main__':
     cosmosDocuments(endpoint, primaryKey, database, container, noSQLPath)
