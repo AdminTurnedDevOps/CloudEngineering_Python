@@ -1,3 +1,10 @@
+##
+# For this script to work properly, you will need to authenticate with AZ CLI.
+# I have found this to be the smoothest way to interact with the Python SDK. If
+# you're using Azure, you're most likely already using the AZ CLI. If not, check
+# it out. https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest
+##
+
 import azure.mgmt.compute as Compute
 from azure.common.client_factory import get_client_from_cli_profile
 
