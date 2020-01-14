@@ -2,7 +2,7 @@ import pyodbc
 import logging
 import sys
 
-def analytics_db_connect(sqlserver, database):
+def db_connect(sqlserver, database):
     try:
         conn = pyodbc.connect('Driver={SQL Server};'
                             f'Server={sqlserver};'
@@ -32,4 +32,4 @@ def analytics_db_connect(sqlserver, database):
 sqlserver = sys.argv[1]
 database = sys.argv[2]
 
-analytics_db_connect(sqlserver, database)
+db_connect(sqlserver, database)
