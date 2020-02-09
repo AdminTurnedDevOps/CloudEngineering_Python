@@ -7,9 +7,9 @@ import json
 
 password = getpass.getpass("Enter your password: ")
 
-def listRuns(username):
+def listRuns(project, repo, username):
     try:
-        listRuns = requests.get('https://api.github.com/repos/AdminTurnedDevOps/TerraformWorkflow/actions/runs', auth=HTTPBasicAuth(username,password))
+        listRuns = requests.get(f'https://api.github.com/repos/{project}/{repo}/actions/runs', auth=HTTPBasicAuth(username,password))
         
         if listRuns.status_code == 200:
             print('Authorization successful')
@@ -27,11 +27,13 @@ def listRuns(username):
     js = json.loads(j)
     print(js['workflow_runs'])
 
-username = sys.argv[1]
+project = sys.argv[1]
+repo = sys.argv[2]
+username = sys.argv[3]
 
 if __name__ == '__main__':
-    listRuns(username)
+    listRuns(project, repo, username)
 
 else:
     print('Running as imported module...')
-    listRuns(username)
+    listRuns(project, repo, username)
